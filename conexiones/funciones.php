@@ -145,3 +145,11 @@ function listar_requerimientos()
     $resultado = mysqli_query($pdo,$query);
     return mysqli_fetch_all($resultado);
 }
+
+function listar_requerimientos_soporte()
+{
+    global $pdo;
+    $query ="SELECT * FROM requerimientos WHERE `usuario soporte` IS NULL;";
+    $resultado = mysqli_query($pdo,$query);
+    return mysqli_fetch_all($resultado);
+}

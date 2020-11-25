@@ -15,7 +15,8 @@ require_once "../conexiones/funciones.php"
 </head>
 
 <body class="bg-dark text-white text-center">
-    <div class="container">
+    <div class="container-flex">
+        <br>
         <h1 class="text-center font-weight-lighter">PANEL SOPORTE</h1><br>
 
 
@@ -23,7 +24,7 @@ require_once "../conexiones/funciones.php"
             <div class="col-sm-6">
                 <div class="card bg-dark">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h5 class="card-title">Reportes aceptados</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
@@ -32,8 +33,36 @@ require_once "../conexiones/funciones.php"
             <div class="col-sm-6">
                 <div class="card bg-dark">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title">Reportes disponibles</h5>
+                        <p class="card-text">
+                            <div>
+                                <table class="table table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">FECHA</th>
+                                            <th scope="col">DESCRIPCION</th>
+                                            <th scope="col">UBICACION</th>
+                                            <th scope="col">OPCIONES</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $lista = listar_requerimientos_soporte();
+                                        foreach ($lista as $x) {
+                                            echo '<tr><th scope="row">' . $x[0] . '</th>';
+                                            echo '<td>' . $x[9] . '</td>';
+                                            echo '<td>' . $x[6] . '</td>';
+                                            echo '<td>' . $x[5] . '</td>';
+                                            echo '<td> <button class="btn btn-primary p-1">Editar</button></td>';
+                                            echo '<td><form action="../conexiones/eliminarUsuario.php" method="POST"><button type="submit" class="btn btn-danger p-1" name="usuario" value="' . $x[0] . '">Eliminar</button></form></td></tr>';
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
@@ -41,18 +70,8 @@ require_once "../conexiones/funciones.php"
         </div>
 
 
-
-
-        <div class="w-50 mx-auto ">
-            <div class="card bg-dark">
-                <div class="card-body">
-                    <h5 class="card-title">Opciones</h5>
-                    <br>
-                    <a href="#" class="btn btn-primary btn-block btn-sm p-2" data-toggle="modal" data-target="#crear_requerimiento">Agregar requerimiento</a>
-                    <a href="usuario_listar_req.php" class="btn btn-primary btn-block btn-sm p-2">Listar requerimientos</a>
-                </div>
-            </div>
-        </div>
+        <br><br><br>
+        <hr>
         <a href="../conexiones/cerrarSession.php"><button class="btn btn-primary btn-lg btn-block">Cerrar sesión</button></a>
     </div>
 

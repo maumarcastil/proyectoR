@@ -126,6 +126,7 @@ function crear_requerimiento($categoria, $servicio,$descripcion, $ubicacion){
     $id = $_SESSION["user"]["id"];
     $query = "INSERT INTO `requerimientos` (`usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`) VALUES ('$id', '$categoria', '$servicio', 'REPORTADO', '$descripcion', '$ubicacion');";
     mysqli_query($pdo, $query);
+    echo "datos: '$id' '$categoria' '$servicio' '$descripcion' '$ubicacion'";
     //echo '<script>alert("Se creo la categoria")</script>';
 }
 

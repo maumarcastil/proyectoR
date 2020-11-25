@@ -24,7 +24,7 @@ require_once "../conexiones/funciones.php"
         <h5 class="card-title">Opciones</h5>
         <br>
         <a href="#" class="btn btn-primary btn-block btn-sm p-2" data-toggle="modal" data-target="#crear_requerimiento">Agregar requerimiento</a>
-        <a href="#" class="btn btn-primary btn-block btn-sm p-2" data-toggle="modal" data-target="#crear_categoria">Listar requerimientos</a>
+        <a href="usuario_listar_req.php" class="btn btn-primary btn-block btn-sm p-2">Listar requerimientos</a>
       </div>
     </div>
   </div>

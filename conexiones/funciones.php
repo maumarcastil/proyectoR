@@ -2,6 +2,7 @@
 require_once "conexion.php";
 
 
+
 function existe_usuario(){
 if(isset($_SESSION["user"])){
     switch ($_SESSION["user"]["ID_tipo_usuario"]) {
@@ -25,8 +26,6 @@ if(isset($_SESSION["user"])){
     }
 }
 }
-
-
 
 function listarServicioDeCategoria($categoria)
 {
@@ -75,6 +74,11 @@ function eliminar_categoria($id)
     mysqli_query($pdo, $query);
     echo "<script>alert('Ha sido Borrado')</script>";
 }
+
+
+
+
+
 //USUARIO 
 function listar_usuario()
 {
@@ -91,6 +95,10 @@ function eliminar_usuario($id)
     mysqli_query($pdo, $query);
     echo "<script>alert('Ha sido Borrado')</script>";
 }
+
+
+
+
 
 //SERVICIOS
 function crear_servicio($servicio,$categoria){
@@ -128,3 +136,12 @@ function crear_requerimiento($categoria, $servicio,$descripcion, $ubicacion){
     mysqli_query($pdo, $query);
 }
 
+
+function listar_requerimientos()
+{
+    global $pdo;
+    $id = $_SESSION["user"]["id"];
+    $query ="SELECT * FROM requerimientos where `usuario solicitante` = '$id'";
+    $resultado = mysqli_query($pdo,$query);
+    return mysqli_fetch_all($resultado);
+}

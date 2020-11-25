@@ -118,15 +118,10 @@ require_once "../conexiones/funciones.php"
               <div class="row">
                 <div class="col-md-6 col-12 mt-3">
                   <!--boton de registrar -->
-                  <button type="submit" class="btn btn-primary w-100">Registrar <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" />
-                      <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z" />
-                      <path fill-rule="evenodd" d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
-                    </svg> </button>
+                  <button type="submit" class="btn btn-primary p-1">Registrar</button>
+                  <button type="button" class="btn btn-secondary p-1" data-dismiss="modal">Cerrar</button>
+
                 </div>
-                <div class="col-md-6 mt-3">
-                  <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cerrar</button>
-                </div></a>
 
               </div>
             </form>

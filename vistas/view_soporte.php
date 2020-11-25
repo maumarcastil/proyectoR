@@ -21,7 +21,7 @@ require_once "../conexiones/funciones.php"
 
         <div class="row">
             <div class="col-sm-6">
-                <div class="card">
+                <div class="card bg-dark">
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -30,7 +30,7 @@ require_once "../conexiones/funciones.php"
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="card">
+                <div class="card bg-dark">
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>

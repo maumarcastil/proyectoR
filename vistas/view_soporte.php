@@ -55,7 +55,7 @@ require_once "../conexiones/funciones.php"
                                             echo '<td>' . $x[9] . '</td>';
                                             echo '<td>' . $x[6] . '</td>';
                                             echo '<td>' . $x[5] . '</td>';
-                                            echo '<td> <button class="btn btn-primary p-1">Editar</button><form action="../conexiones/eliminarUsuario.php" method="POST"><button type="submit" class="btn btn-danger p-1" name="usuario" value="'.$x[0].'">Eliminar</button></form></td>';
+                                            echo '<td> <button class="btn btn-primary p-1">Aceptar</button><form action="../conexiones/eliminarUsuario.php" method="POST"><button type="submit" class="btn btn-danger p-1" name="usuario" value="'.$x[0].'">Eliminar</button></form></td>';
                                         }
                                         ?>
                                     </tbody>

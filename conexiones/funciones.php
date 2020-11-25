@@ -117,12 +117,15 @@ function eliminar_servicios($id)
 }
 
 
-//INSERT INTO `requerimientos` ( `usuario solicitante`, `usuario soporte`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`, `detalle`, `fecha creacion`, `fecha atencion`, `fecha finalizacion`) VALUES ( '1', NULL, '2', '3', '4', 'lo que quieras', 'ubicasiop', NULL, 'current_timestamp()', NULL, NULL)
+//INSERT INTO `requerimientos` (`usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`) VALUES ('16', '1', '1', 'REPORTADO', 'DESCRIP', 'UBI');
+
+
 //REQUERIMIENTO
 function crear_requerimiento($categoria, $servicio,$descripcion, $ubicacion){
     global $pdo;
     $id = $_SESSION["user"]["id"];
-    $query = "INSERT INTO `requerimientos` ( `usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`,`fecha creacion`) VALUES ( '$id', '$categoria', '$servicio', 'reportado', '$descripcion', '$ubicacion',current_timestamp());";
+    //$query = "INSERT INTO `requerimientos` ( `usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`,`fecha creacion`) VALUES ( '$id', '$categoria', '$servicio', 'reportado', '$descripcion', '$ubicacion',current_timestamp());";
+    $query = "INSERT INTO `requerimientos` (`usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`) VALUES ('$id', '$categoria', '$servicio', 'REPORTADO', '$descripcion', '$ubicacion');";
     mysqli_query($pdo, $query);
     echo '<script>alert("Se creo la categoria")</script>';
 }

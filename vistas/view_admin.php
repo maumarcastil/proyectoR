@@ -54,8 +54,8 @@ require_once "../conexiones/funciones.php"
           </div>
         </div>
       </div>
-    </div>
-
+    </div> <hr>
+    <a href="view_admin.php"><button  class="btn btn-primary btn-lg btn-block">Atras</button></a>
   </div>
 
   <!-- Modal crear usuario-->

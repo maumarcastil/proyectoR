@@ -55,7 +55,7 @@ require_once "../conexiones/funciones.php"
         </div>
       </div>
     </div> <hr>
-    <a href="../index.php"><button  class="btn btn-primary btn-lg btn-block">Cerrar sesión</button></a>
+    <a href="../conexiones/cerrarSession.php"><button  class="btn btn-primary btn-lg btn-block">Cerrar sesión</button></a>
   </div>
 
   <!-- Modal crear usuario-->

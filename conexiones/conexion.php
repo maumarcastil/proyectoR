@@ -1,6 +1,6 @@
 
 <?php
-$pdo = new mysqli("localhost","root","","proyecto");
+$pdo = new mysqli("r1bsyfx4gbowdsis.cbetxkdyhwsb.us-east-1.rds.amazonaws.com","kbo4ee4or72mzf9p","o67j9b8m1ibmgya3","f0hztjawrgotplbb");
 
 // Check connection
 if ($pdo -> connect_errno) {

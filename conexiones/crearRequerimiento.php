@@ -9,7 +9,7 @@ if(isset($_POST["servicio"])){
 
 
     crear_requerimiento($categoria, $servicio,$descripcion, $ubicacion);
-    /* header("location: ../vistas/view_usuario.php"); */
+    header("location: ../vistas/view_usuario.php");
 }else{
     echo "error en el post";
 }

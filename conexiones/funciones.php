@@ -124,9 +124,8 @@ function eliminar_servicios($id)
 function crear_requerimiento($categoria, $servicio,$descripcion, $ubicacion){
     global $pdo;
     $id = $_SESSION["user"]["id"];
-    //$query = "INSERT INTO `requerimientos` ( `usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`,`fecha creacion`) VALUES ( '$id', '$categoria', '$servicio', 'reportado', '$descripcion', '$ubicacion',current_timestamp());";
     $query = "INSERT INTO `requerimientos` (`usuario solicitante`, `categoria`, `servicio`, `estado`, `descripcion solicitud`, `ubicacion`) VALUES ('$id', '$categoria', '$servicio', 'REPORTADO', '$descripcion', '$ubicacion');";
     mysqli_query($pdo, $query);
-    echo '<script>alert("Se creo la categoria")</script>';
+    //echo '<script>alert("Se creo la categoria")</script>';
 }
 

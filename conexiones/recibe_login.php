@@ -19,8 +19,9 @@ try {
         //crea la session de registro y redirige
         $response = mysqli_fetch_assoc($response);
         $_SESSION["user"] = $response;
+        var_dump($_SESSION["user"]);
 
-        switch ($response["ID_tipo_usuario"]) {
+        /* switch ($response["ID_tipo_usuario"]) {
             case '1':
                 //1 = administrador  --  redirige a su vista
                 header("location: ../vistas/view_admin.php");
@@ -38,7 +39,7 @@ try {
             default:
                 echo "hay un error";
                 break;
-        }
+        } */
     } else {
         //si el login esta mal redirige al inicio
         echo "Hay un error en el login";

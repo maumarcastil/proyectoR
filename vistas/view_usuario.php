@@ -15,19 +15,26 @@ require_once "../conexiones/funciones.php"
 </head>
 
 <body class="bg-dark text-white text-center">
-  <h1 class="text-center font-weight-lighter">PANEL USUARIO</h1><br>
+  <div class="container">
 
 
-  <div class="w-50 mx-auto ">
-    <div class="card bg-dark">
-      <div class="card-body">
-        <h5 class="card-title">Opciones</h5>
-        <br>
-        <a href="#" class="btn btn-primary btn-block btn-sm p-2" data-toggle="modal" data-target="#crear_requerimiento">Agregar requerimiento</a>
-        <a href="usuario_listar_req.php" class="btn btn-primary btn-block btn-sm p-2">Listar requerimientos</a>
+
+    <h1 class="text-center font-weight-lighter">PANEL USUARIO</h1><br>
+
+
+    <div class="w-50 mx-auto ">
+      <div class="card bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Opciones</h5>
+          <br>
+          <a href="#" class="btn btn-primary btn-block btn-sm p-2" data-toggle="modal" data-target="#crear_requerimiento">Agregar requerimiento</a>
+          <a href="usuario_listar_req.php" class="btn btn-primary btn-block btn-sm p-2">Listar requerimientos</a>
+        </div>
       </div>
     </div>
+    <a href="../conexiones/cerrarSession.php"><button  class="btn btn-primary btn-lg btn-block">Cerrar sesión</button></a>
   </div>
+
 
   <!-- modal crear requerimiento-->
   <div class="modal fade" id="crear_requerimiento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,7 +49,7 @@ require_once "../conexiones/funciones.php"
         <div class="modal-body">
 
           <form action="../conexiones/crearRequerimiento.php" method="POST">
-          
+
             <div class="form-group">
               <label>Categorias Principales </label>
               <select class="form-control" name="idcategoria" id="list_cat_principales">
@@ -50,7 +57,7 @@ require_once "../conexiones/funciones.php"
                 <?php
                 $lista = listar_categorias();
                 foreach ($lista as $cat) {
-                  echo '<option value="'.$cat[0].'">'.$cat[1].'</option>';
+                  echo '<option value="' . $cat[0] . '">' . $cat[1] . '</option>';
                 }
                 ?>
               </select>

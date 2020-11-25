@@ -8,7 +8,7 @@ if(isset($_POST["servicio"])){
     $ubicacion = $_POST["ubicacionenlaempresa"];
 
 
-    crear_servicio($categoria, $servicio,$descripcion, $ubicacion);
+    crear_requerimiento($categoria, $servicio,$descripcion, $ubicacion);
     /* header("location: ../vistas/view_usuario.php"); */
 }else{
     echo "error en el post";

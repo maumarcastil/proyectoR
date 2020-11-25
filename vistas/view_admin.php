@@ -118,8 +118,8 @@ require_once "../conexiones/funciones.php"
               <div class="row">
                 <div class="col-md-6 col-12 mt-3">
                   <!--boton de registrar -->
-                  <button type="submit" class="btn btn-primary btn-block p-2">Registrar</button>
-                  <button type="button" class="btn btn-secondary btn-block p-2" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Registrar</button>
 
                 </div>
 

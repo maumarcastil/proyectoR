@@ -125,9 +125,7 @@ require_once "../conexiones/funciones.php"
                     </svg> </button>
                 </div>
                 <div class="col-md-6 mt-3">
-                  <!--boton de  limpiar -->
-                  <a href="registro.html">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cerrar</button>
                 </div></a>
 
               </div>

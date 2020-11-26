@@ -46,7 +46,7 @@ require_once "../conexiones/funciones.php"
                                             echo '<td>' . $x[9] . '</td>';
                                             echo '<td>' . $x[6] . '</td>';
                                             echo '<td>' . $x[5] . '</td>';
-                                            echo '<td> <button class="btn btn-primary p-1">Responder</button><form action="../conexiones/cancelarReq.php" method="POST"><button type="submit" class="btn btn-danger p-1" name="req" value="'.$x[0].'">Cancelar</button></form></td>';
+                                            echo '<td> <button id="responder'.$x[0].'" class="btn btn-primary p-1">Responder</button><form action="../conexiones/cancelarReq.php" method="POST"><button type="submit" class="btn btn-danger p-1" name="req" value="'.$x[0].'">Cancelar</button></form></td>';
                                         }
                                         ?>
                                     </tbody>
@@ -98,6 +98,19 @@ require_once "../conexiones/funciones.php"
         <hr>
         <a href="../conexiones/cerrarSession.php"><button class="btn btn-primary btn-lg btn-block">Cerrar sesión</button></a>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            
+            $("button[id^=responder]").click(function() {
+                console.log($(this));
+            });
+
+
+        });
+
+
+    </script>
 
 
 

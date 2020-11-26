@@ -103,7 +103,7 @@ require_once "../conexiones/funciones.php"
         $(document).ready(function () {
             
             $("button[id^=responder]").click(function() {
-                console.log($(this));
+                console.log($(this).parent());
             });
 
 

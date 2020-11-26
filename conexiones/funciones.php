@@ -158,7 +158,7 @@ function listar_requerimientos_aceptados()
 {
     global $pdo;
     $id = $_SESSION["user"]["id"];
-    $query ="SELECT * FROM requerimientos WHERE `usuario soporte` ='$id' ;";
+    $query ="SELECT * FROM requerimientos WHERE `usuario soporte` ='$id' and `estado` <> 'CANCELADO';";
     $resultado = mysqli_query($pdo,$query);
     return mysqli_fetch_all($resultado);
 }

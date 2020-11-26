@@ -163,7 +163,7 @@ require_once "../conexiones/funciones.php"
             $("button[id^=responder]").click(function() {
                 let id = $(this).attr("id");
                 idR = id.replace("responder", "");
-                $("#"+id).val(idR);
+                $("#id").val(idR);
             });
         });
 

@@ -25,8 +25,34 @@ require_once "../conexiones/funciones.php"
                 <div class="card bg-dark">
                     <div class="card-body">
                         <h5 class="card-title">Reportes aceptados</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-text">
+                            <div>
+                                <table class="table table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">FECHA</th>
+                                            <th scope="col">DESCRIPCION</th>
+                                            <th scope="col">UBICACION</th>
+                                            <th scope="col">OPCIONES</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $lista = listar_requerimientos_soporte();
+                                        foreach ($lista as $x) {
+                                            echo '<tr><th scope="row">' . $x[0] . '</th>';
+                                            echo '<td>' . $x[9] . '</td>';
+                                            echo '<td>' . $x[6] . '</td>';
+                                            echo '<td>' . $x[5] . '</td>';
+                                            echo '<td> <button class="btn btn-primary p-1">Aceptar</button><form action="../conexiones/eliminarUsuario.php" method="POST"><button type="submit" class="btn btn-danger p-1" name="usuario" value="'.$x[0].'">Eliminar</button></form></td>';
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -62,7 +88,6 @@ require_once "../conexiones/funciones.php"
                                 </table>
                             </div>
                         </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>

@@ -37,9 +37,13 @@ require_once "../conexiones/funciones.php";
                     <?php
                     $lista = listar_requerimientos();
                     foreach ($lista as $x) {
+                        $response = "Sin respuesta";
+                        if($x[8] != "" || $x[8] != null){
+                            $response = $x[8];
+                        }
                         echo '<tr><th scope="row">' . $x[0] . '</th>';
                         echo '<td>' . $x[6] . '</td>';
-                        echo '<td>' . isset($x[8]) ? $x[8] : "Sin respuesta" . '</td>';
+                        echo '<td>' . $response . '</td>';
                         echo '<td>' . $x[5] . '</td>';
                     }
                     ?>

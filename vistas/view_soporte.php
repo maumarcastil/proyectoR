@@ -128,7 +128,6 @@ require_once "../conexiones/funciones.php"
                             <!--boton de registrar -->
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Responder</button>
-
                         </div>
                     </form>
                 </div>

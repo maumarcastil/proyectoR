@@ -40,7 +40,7 @@ require_once "../conexiones/funciones.php"
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $lista = listar_requerimientos_soporte();
+                                        $lista = listar_requerimientos_aceptados();
                                         foreach ($lista as $x) {
                                             echo '<tr><th scope="row">' . $x[0] . '</th>';
                                             echo '<td>' . $x[9] . '</td>';

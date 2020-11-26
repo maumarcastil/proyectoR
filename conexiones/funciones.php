@@ -154,6 +154,17 @@ function listar_requerimientos_soporte()
     return mysqli_fetch_all($resultado);
 }
 
+function listar_requerimientos_aceptados()
+{
+    global $pdo;
+    $id = $_SESSION["user"]["id"];
+    $query ="SELECT * FROM requerimientos WHERE `usuario soporte` ='$id' ;";
+    $resultado = mysqli_query($pdo,$query);
+    return mysqli_fetch_all($resultado);
+}
+
+
+
 function aceptar_req($req){
     global $pdo;
     $id = $_SESSION["user"]["id"];

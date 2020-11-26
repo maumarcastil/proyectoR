@@ -157,6 +157,6 @@ function listar_requerimientos_soporte()
 function aceptar_req($req){
     global $pdo;
     $id = $_SESSION["user"]["id"];
-    $query ="UPDATE `requerimientos` SET `usuario soporte` = '$id', `fecha atencion` = now() WHERE (`codigo` = '$req');";
+    $query ="UPDATE `requerimientos` SET `usuario soporte` = '$id', `estado` = 'EN PROCESO', `fecha atencion` = now() WHERE (`codigo` = '$req');";
     mysqli_query($pdo,$query);
 }

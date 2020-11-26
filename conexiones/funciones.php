@@ -164,10 +164,16 @@ function listar_requerimientos_aceptados()
 }
 
 
-
 function aceptar_req($req){
     global $pdo;
     $id = $_SESSION["user"]["id"];
     $query ="UPDATE `requerimientos` SET `usuario soporte` = '$id', `estado` = 'EN PROCESO', `fecha atencion` = now() WHERE (`codigo` = '$req');";
+    mysqli_query($pdo,$query);
+}
+
+function cancelar_req($req){
+    global $pdo;
+    $id = $_SESSION["user"]["id"];
+    $query ="UPDATE `requerimientos` SET `usuario soporte` = '$id', `estado` = 'CANCELADO', `fecha atencion` = now() WHERE (`codigo` = '$req');";
     mysqli_query($pdo,$query);
 }

@@ -28,7 +28,7 @@ require_once "../conexiones/funciones.php";
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Descripcion</th>
-                        <th scope="col">Ubicacion</th>
+                        <th scope="col">Respuesta</th>
                         <th scope="col">Estado</th>
 
                     </tr>
@@ -39,7 +39,7 @@ require_once "../conexiones/funciones.php";
                     foreach ($lista as $x) {
                         echo '<tr><th scope="row">' . $x[0] . '</th>';
                         echo '<td>' . $x[6] . '</td>';
-                        echo '<td>' . $x[7] . '</td>';
+                        echo '<td>' . isset($x[8]) ? $x[8] : "Sin respuesta" . '</td>';
                         echo '<td>' . $x[5] . '</td>';
                     }
                     ?>

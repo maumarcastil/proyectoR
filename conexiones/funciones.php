@@ -174,6 +174,6 @@ function aceptar_req($req){
 function cancelar_req($req){
     global $pdo;
     $id = $_SESSION["user"]["id"];
-    $query ="UPDATE `requerimientos` SET `usuario soporte` = '$id', `estado` = 'CANCELADO', `fecha atencion` = now() WHERE (`codigo` = '$req');";
+    $query ="UPDATE `requerimientos` SET `usuario soporte` = '$id', `estado` = 'CANCELADO', `fecha finalizacion` = now() WHERE (`codigo` = '$req');";
     mysqli_query($pdo,$query);
 }

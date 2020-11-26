@@ -116,7 +116,7 @@ require_once "../conexiones/funciones.php"
 
                         <div class="form-group" hidden>
                             <label for="exampleFormControlInput1">Crear servicio</label>
-                            <input type="text" class="form-control" name="id" placeholder="id">
+                            <input type="text" class="form-control" id="id" name="id" placeholder="id">
                         </div>
 
                         <div class="form-group">
@@ -165,9 +165,10 @@ require_once "../conexiones/funciones.php"
                 idR = id.replace("responder", "");
                 $("#"+id).val(idR);
             });
-
-
         });
+
+
+
     </script>
 
 
